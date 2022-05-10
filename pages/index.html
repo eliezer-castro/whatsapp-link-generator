@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/sass/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="left">
+        <h1>Gere links para seu WhatsApp de forma rápida e simples.</h1>
+        <p>Gere links direto para o seu chat do WhatsApp com mensagens pré definidas para seus trabalhos.</p>
+        <div class="form">
+          <div class="form__control">
+            <label for="">Número de celular</label>
+            <input type="number" id="ddd" maxlength="2">
+            <input type="tel" id="tel" maxlength="11">
+          </div>
+          <div class="form__control">
+            <label for="">Sua mensagem (Opcional) </label>
+            <textarea name="" id="text" cols="30" rows="5"></textarea>
+          </div>
+          <button type="submit" onclick="tel()" class="form__submit">Gerar link do WhatsApp</button>
+        </div>
+        <div class="geracao">
+          <div class="link-gerado">
+            <div class="titulo-link">
+              <p>🎉 Pronto! Agora é só copiar</p> <img src="/images/copy.svg" alt="">
+            </div>
+            <div class="link ">
+              <p id="link-whats"></p>
+              <div id="copiado">
+                <p>Link copiado com sucesso! 🎉✨</p>
+              </div>
+              <button onclick="copyText()" id="copy">
+                <img src="/images/copy.svg" alt="">
+              </button>
+             
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="right">
+
+      </div>
+
+    </div>
+
+  </section>
+  <script src="/js/main.js"></script>
+
+
+</body>
+
+</html>

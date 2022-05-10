@@ -1,0 +1,225 @@
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+@import "layout/grid";
+@import "utilities/variables";
+
+body {
+  background-color: $gray-900;
+  color: $white;
+}
+
+.form {
+  padding: 1em 0;
+}
+
+.form__control {
+  padding: 1em 0;
+}
+
+label {
+  font-family: "Inter";
+  padding: 0.5em 0;
+  display: block;
+  font-size: 12px;
+  color: $text-color;
+  margin-bottom: 8px;
+}
+
+input {
+  font-family: "Inter";
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #cccc;
+  font-family: inherit;
+  padding: 0.1em 0.5em;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.3s;
+  appearance: textfield;
+}
+
+input[type="tel"] {
+  width: 91%;
+  font-family: "Inter";
+}
+
+input[type="number"]:first-of-type {
+  padding: 0.1em 0.1em;
+  width: 8%;
+  text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1d1d;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+textarea {
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cccc;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: transparent;
+  color: #f1f1f1;
+  transition: 0.3s;
+  font-family: "Inter";
+  line-height: 150%;
+}
+
+textarea:focus {
+  border-bottom: 1.5px solid #fff;
+  animation: 0.3s;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus {
+  border-bottom: 1.5px solid #fff;
+  animation: 0.3s;
+}
+
+.form__submit {
+  font-family: "Inter";
+  width: 100%;
+  height: 60px;
+  color: white;
+  cursor: pointer;
+  background: #52bd6c;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9em;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background: $color-primary-400;
+    transition: 0.2s ease-in ;
+  }
+}
+.active {
+  display: block !important;
+}
+
+section .container .left {
+  .geracao {
+    display: none;
+    .link-gerado {
+      .titulo-link {
+        display: flex;
+        align-items: center;
+
+        img {
+          padding: 0.4rem;
+        }
+      }
+
+      .link {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //background-color: white;
+        border: .5px solid rgba(82, 189, 108, 0.5);
+        border-collapse: collapse;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+
+        p {
+          padding-left: .8em;
+          white-space: nowrap;
+        }
+        #copiado{
+          display: none;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: #52bd6c;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          display: none;
+          animation: ease-in-link 3s ease-in-out;
+    
+          p{
+            color: #f1f1f1;
+          }
+        }
+
+        #copy {
+          height: 56px;
+          width: 56px;
+          padding: 0;
+          margin: 0;
+          border: none;
+          background-color: #52bd6c;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 100;
+          right: -2px;
+          position: absolute;
+          cursor: pointer;
+         
+
+          img {
+            height: 20px;
+          }
+
+          &:hover {
+            background: $color-primary-400;
+            transition: 0.2s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes ease-in-link {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
