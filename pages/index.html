@@ -10,11 +10,32 @@
 </head>
 
 <body>
+  <div class="info-header">
+    <p>Uma nova versão já está em desenvolvimento🥳</p>
+  </div>
+  <header>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="https://web.whatsapp.com/"> WHATSAPP WEB</a>
+        </li>
+        <li>
+          <a href="#">FUNCIONALIDADES </a>
+        </li>
+        <li>
+          <a href="#">AJUDA </a>
+        </li>
+
+      </ul>
+    </div>
+  </header>
   <section>
+    
+    
     <div class="container">
       <div class="left">
         <h1>Gere links para seu WhatsApp de forma rápida e simples.</h1>
-        <p>Gere links direto para o seu chat do WhatsApp com mensagens pré definidas para seus trabalhos.</p>
+        <p class="description">Gere links direto para o seu chat do WhatsApp com mensagens pré definidas para seus trabalhos.</p>
         <div class="form">
           <div class="form__control">
             <label for="">Número de celular</label>
@@ -22,11 +43,29 @@
             <input type="tel" id="tel" maxlength="11">
           </div>
           <div class="form__control">
+            
             <label for="">Sua mensagem (Opcional) </label>
-            <textarea name="" id="text" cols="30" rows="5"></textarea>
+            <div class="suggest">
+              <div class="suggest-messager">
+                <button class="messager" onclick="addText('Oi ')">Oi</button>
+                <button class="messager" onclick="addText('Olá ')">Olá</button>
+                <button class="messager" onclick="addText('Bom dia ')">Bom dia</button>
+                <button class="messager" onclick="addText('Boa tarde ')">Boa tarde</button>
+                <button class="messager" onclick="addText('Boa noite ')">Boa noite</button>
+                <button class="messager" onclick="addText('Olá, tudo bem? ')">Olá, tudo bem?</button>
+              </div>
+            </div>
+            <textarea name="" id="text" cols="30" rows="5" placeholder="Degite sua mensagem"></textarea>
           </div>
-          <button type="submit" onclick="tel()" class="form__submit">Gerar link do WhatsApp</button>
+          <button type="submit" onclick="tel()" class="form__submit" >Gerar link do WhatsApp</button>
         </div>
+        <div class="error">
+          <div class="message-error">
+            <p>Ops! parece que vc não adicionou um número válido 😥</p>
+          </div>
+          
+        </div>
+        
         <div class="geracao">
           <div class="link-gerado">
             <div class="titulo-link">
@@ -46,13 +85,15 @@
         </div>
         
       </div>
-      <div class="right">
-
-      </div>
 
     </div>
 
   </section>
+  <footer>
+    <div class="container">
+
+    </div>
+  </footer>
   <script src="/js/main.js"></script>
 
 
