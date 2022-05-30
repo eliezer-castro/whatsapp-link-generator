@@ -16,14 +16,18 @@ document.getElementById('tel').addEventListener('input', function (e) {
 var link;
 
 function tel() {
+  const api ='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=';
   let tel = document.getElementById("tel").value;
   let ddd = document.getElementById("ddd").value;
   let text = document.getElementById("text").value;
-  str = ddd + tel;
+  str = '+55' + ddd + tel;
   number = str.replace(/-/g, '');
   str1 = number.replace(/\s/g, '');
   link = `https://api.whatsapp.com/send?phone=${encodeURIComponent(str1)}&text=${encodeURIComponent(text)}`
   document.getElementById("link-whats").innerHTML = link;
+  document.getElementById("qrcode-image").src = api + link;
+
+  
 
   if (!tel || tel.length === 0 || !ddd || ddd.length === 0) {
     document.querySelector('.error').classList.add("active");
@@ -32,8 +36,6 @@ function tel() {
     document.querySelector('.geracao').classList.add("active");
     document.querySelector('.error').classList.remove("active");
   }
-  
-
 
 }
 
