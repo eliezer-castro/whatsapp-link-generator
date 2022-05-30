@@ -16,7 +16,7 @@ document.getElementById('tel').addEventListener('input', function (e) {
 var link;
 
 function tel() {
-  const api ='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=';
+  const api ='https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=';
   let tel = document.getElementById("tel").value;
   let ddd = document.getElementById("ddd").value;
   let text = document.getElementById("text").value;
